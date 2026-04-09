@@ -165,6 +165,8 @@ a:hover {
 
 .profile-figure {
   margin: 0;
+  width: 160px;
+  max-width: 100%;
 }
 
 .profile-figure img {
@@ -224,6 +226,10 @@ a:hover {
 
   .profile-block {
     grid-template-columns: 1fr;
+  }
+
+  .profile-figure {
+    margin: 0 auto;
   }
 }
 
