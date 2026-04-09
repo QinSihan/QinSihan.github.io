@@ -1,19 +1,217 @@
 <!DOCTYPE html>
-<html lang ="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Paper-style personal homepage for Sihan Qin.">
+  <title>Sihan Qin | Research Highlights</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;family=STIX+Two+Text:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="styles.css">
-  <title>
-    My HomePage
-  </title>
 </head>
 <body>
-  <hl>
-    Welcome to My HomePage
-  </hl>
-  <p> 
-    New
-  </p>
+  <main class="paper">
+    <header class="paper-head">
+      <div class="paper-rule paper-rule-top"></div>
+      <h1 class="paper-title">Sihan Qin's Homepage</h1>
+      <p class="paper-authors">
+        Sun Yat-sen University
+      </p>
+      <div class="paper-links">
+        <a href="mailto:qinsihan999@gmail.com">Email</a>
+        <a href="https://github.com/QinSihan" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/sihanqin" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=vUdEZbMAAAAJ" target="_blank" rel="noreferrer">Google Scholar</a>
+      </div>
+      <div class="paper-rule paper-rule-bottom"></div>
+    </header>
+
+    <section class="abstract-block">
+      <h2>Abstract</h2>
+      <div class="abstract-copy">
+        <p class="lead">
+          I am an undergraduate student in Computer Science and Technology at Sun
+          Yat-sen University, Guangzhou, China. My research interests lie in Embodied Intelligence and World Model.
+          This page collects a brief overview of my background, research experience,
+          publications, and other academic activities. If you are interested in related
+          topics, please feel free to contact me by email.
+        </p>
+      </div>
+    </section>
+
+    <section class="paper-body">
+      <section class="paper-section">
+        <h2>1. About</h2>
+        <div class="profile-block">
+          <figure class="profile-figure">
+            <img src="9F68A8C0-58F4-406F-9C45-14B00955372F_1_201_a.jpeg" alt="Sihan Qin">
+            <figcaption>Sihan Qin</figcaption>
+          </figure>
+          <div class="profile-copy">
+            <p>
+              I am currently an undergraduate student at Sun Yat-sen University in
+              Guangzhou, China. I am broadly interested in Embodied Intelligence and World Model, with a focus on robotic manipulation,
+            </p>
+            <p>
+              My recent work includes robotic manipulation and physical world modeling.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="paper-section">
+        <h2>2. Research Interests</h2>
+        <p>
+          My research interests lie in Embodied Intelligence and World Model.
+        </p>
+      </section>
+
+      <section class="paper-section">
+        <h2>3. Education</h2>
+        <p>
+          <strong>Sun Yat-sen University</strong><br>
+          Major in Computer Science and Technology (Artificial Intelligence &amp; Big Data),
+          Average Score: 88/100<br>
+          Jun 2027 (Expected)
+        </p>
+        <p>
+          Core Courses: Machine Learning &amp; Data Mining, Artificial Intelligence,
+          Principles of Database Systems, Modern Control Systems, Optimization Theory,
+          Computer Graphics, Digital Image Processing, Computer Networks.
+        </p>
+        <p>
+          Awards: 3rd-Class University Scholarship (2023, 2024); Honorable Mention,
+          Mathematical Contest in Modeling 2025.
+        </p>
+      </section>
+
+      <section class="paper-section">
+        <h2>4. Research Experience</h2>
+        <p>
+          <strong>HCP Lab, Sun Yat-sen University</strong><br>
+          Advised by Prof. Guangrun Wang and Liang Lin<br>
+          Jul 2025 - Present
+        </p>
+        <p>
+          Proposed and developed a physical autoregressive model that transfers
+          physical priors from video pretraining to robotic manipulation, enabling
+          video-consistent action generation without action pretraining.
+        </p>
+        <p>
+          Conducted training and evaluation on ManiSkill, LIBERO, and CALVIN; tuned
+          key hyperparameters and improved simulation success rates from about 30% to
+          over 90%.
+        </p>
+        <p>
+          Conducted real-robot experiments on a Franka Panda arm and collected 80
+          teleoperated trajectories for supervised learning, improving generalization
+          and real-world robustness while contributing to paper writing.
+        </p>
+        <p>
+          <strong>Institute of Artificial Intelligence and Unmanned Systems, Sun Yat-sen University</strong><br>
+          Procedural 3D Image Generation from Lung CT Scans<br>
+          May 2024 - Present
+        </p>
+        <p>
+          Curated full respiratory-cycle lung CT samples from public datasets and
+          performed threshold segmentation, meshing, and point cloud conversion with
+          scikit-image and Open3D.
+        </p>
+        <p>
+          Separated bronchi and lung boundaries using RANSAC, curvature clustering,
+          Alpha Shape, and voxel filtering to support downstream lesion analysis.
+        </p>
+        <p>
+          <strong>Mathematical Contest in Modeling 2025</strong><br>
+          Olympic Medal Table Prediction, Honorable Mention<br>
+          Feb 2025
+        </p>
+        <p>
+          Built regression, random forest, and SVM models combined with SMOTE,
+          Bayesian optimization, and Monte Carlo simulation to predict medal counts
+          and analyze key influencing factors.
+        </p>
+      </section>
+
+      <section class="paper-section">
+        <h2>5. Publications</h2>
+        <p>
+          Zijian Song, <strong>Sihan Qin</strong>, Tianshui Chen, Liang Lin, Guangrun
+          Wang. <em>Physical Autoregressive Model for Robotic Manipulation without
+          Action Pretraining</em>. arXiv:2508.09822.
+        </p>
+        <p>
+          Zijian Song, Qichang Li, <strong>Sihan Qin</strong>, Yuhao Chen, Tianshui
+          Chen, Liang Lin, Guangrun Wang. <em>Learning Physics from Pretrained Video
+          Models: A Multimodal Continuous and Sequential World Interaction Models for
+          Robotic Manipulation</em>. arXiv:2603.00110.
+        </p>
+      </section>
+
+      <section class="paper-section">
+        <h2>6. Internship Experience</h2>
+        <p>
+          <strong>Guangzhou Shuzhi Technology</strong><br>
+          Algorithm Intern<br>
+          Sept 2025 - Oct 2025
+        </p>
+        <p>
+          Contributed to prompt engineering for an academic-industry matching platform.
+        </p>
+        <p>
+          Diagnosed flaws in legacy AI interactions and implemented a prompt framework
+          combining UltraRAG and Deep Research with multiround retrieval-LLM analysis.
+        </p>
+        <p>
+          Structured key LLM-generated analytical results into JSON and stored them in
+          databases to support front-end development.
+        </p>
+      </section>
+
+      <section class="paper-section">
+        <h2>7. Skills</h2>
+        <p>
+          Languages: Mandarin (Native), Cantonese (Fluent), English (Fluent),
+          French (Basic).
+        </p>
+        <p>
+          Technical: Machine Learning, Deep Learning, Robotics, PyTorch, Python,
+          C++, C, SQL, Linux, Franka.
+        </p>
+      </section>
+
+      <section class="paper-section" id="contact">
+        <h2>8. Contact</h2>
+        <p>
+          Tel: +86 137 1903 7188<br>
+          Email: <a href="mailto:qinsihan.sysu@gmail.com">qinsihan.sysu@gmail.com</a><br>
+          LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">https://www.linkedin.com/</a><br>
+          Google Scholar: <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">https://scholar.google.com/</a><br>
+          GitHub: <a href="https://github.com/QinSihan" target="_blank" rel="noreferrer">github.com/QinSihan</a><br>
+          Guangzhou, Guangdong, P.R. China
+        </p>
+      </section>
+    </section>
+
+    <footer class="paper-footer">
+      <p class="footer-views">Page views: <strong data-views>...</strong></p>
+    </footer>
+  </main>
+
+  <script>
+    const views = document.querySelectorAll("[data-views]");
+
+    fetch("https://api.countapi.xyz/hit/qinsihan-github-io/home")
+      .then((response) => response.json())
+      .then((data) => {
+        views.forEach((node) => {
+          node.textContent = data.value.toLocaleString();
+        });
+      });
+  </script>
 </body>
 </html>
