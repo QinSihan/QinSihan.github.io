@@ -205,12 +205,15 @@
   <script>
     const views = document.querySelectorAll("[data-views]");
 
-    fetch("https://api.countapi.xyz/hit/qinsihan-github-io/home")
+    fetch("https://api.counterapi.dev/v1/qinsihan-github-io/home/up")
       .then((response) => response.json())
       .then((data) => {
         views.forEach((node) => {
-          node.textContent = data.value.toLocaleString();
+          node.textContent = data.count.toLocaleString();
         });
+      })
+      .catch(() => {
+        views.forEach((node) => { node.textContent = "—"; });
       });
   </script>
 </body>
