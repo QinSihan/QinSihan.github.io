@@ -197,7 +197,7 @@ ul {
 
 .meta-row {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 10px;
   margin-top: 14px;
 }
@@ -219,6 +219,30 @@ ul {
 .meta-card strong {
   font-size: 1.12rem;
   line-height: 1.15;
+}
+
+.visitor-map-card {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: rgba(245, 236, 225, 0.88);
+}
+
+.visitor-map-embed {
+  overflow: hidden;
+  border-radius: calc(var(--radius-md) - 4px);
+  border: 1px solid rgba(81, 64, 46, 0.12);
+  background: rgba(255, 252, 247, 0.74);
+}
+
+.visitor-map-embed img,
+.visitor-map-embed iframe,
+.visitor-map-embed canvas,
+.visitor-map-embed svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .interest-card {

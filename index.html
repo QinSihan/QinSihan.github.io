@@ -58,12 +58,20 @@
 
         <div class="meta-row">
           <div class="meta-card">
-            <span class="meta-label">Page Views</span>
-            <strong data-views>...</strong>
-          </div>
-          <div class="meta-card">
             <span class="meta-label">Location</span>
             <strong>Canton</strong>
+          </div>
+        </div>
+
+        <div class="visitor-map-card">
+          <p class="interest-title">Visitor Map</p>
+          <div class="visitor-map-embed">
+            <a href="https://mapmyvisitors.com/web/1c40l" title="Visit tracker">
+              <img
+                src="https://mapmyvisitors.com/map.png?d=7mb2p5H-cCY5p5rmuDxI3bkvGrJeQATZ1VwtR45QRTg&cl=ffffff"
+                alt="Visitor map"
+              >
+            </a>
           </div>
         </div>
 
@@ -86,7 +94,7 @@
           </p>
           <p class="hero-actions">
             <a class="hero-download" href="Resume_Sihan Qin.pdf" download>Download my CV</a>
-            <span class="hero-update">Updated Apr 16, 2026</span>
+            <span class="hero-update">Updated Apr 21, 2026</span>
           </p>
         </header>
 
@@ -220,21 +228,5 @@
     </div>
   </main>
 
-  <script>
-    const views = document.querySelectorAll("[data-views]");
-
-    fetch("https://api.counterapi.dev/v1/qinsihan-github-io/home/up")
-      .then((response) => response.json())
-      .then((data) => {
-        views.forEach((node) => {
-          node.textContent = data.count.toLocaleString();
-        });
-      })
-      .catch(() => {
-        views.forEach((node) => {
-          node.textContent = "—";
-        });
-      });
-  </script>
 </body>
 </html>
