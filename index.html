@@ -14,7 +14,7 @@
     href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Source+Sans+3:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   >
-  <link rel="stylesheet" href="styles.css?v=20260416-4">
+  <link rel="stylesheet" href="styles.css?v=20260516-2">
 </head>
 <body>
   <main class="page-shell">
@@ -208,10 +208,18 @@
                 An attention-friendly Zotero plugin that answers questions inside native notes and helps
                 keep paper reading and note-taking in one place.
               </p>
-              <p class="project-link">
+              <p class="project-meta">
                 <a href="https://github.com/QinSihan/zotero-paper-partner" target="_blank" rel="noreferrer">
                   View on GitHub
                 </a>
+                <span>&middot;</span>
+                <span
+                  class="project-downloads"
+                  data-download-badge="https://img.shields.io/github/downloads/QinSihan/zotero-paper-partner/total.json"
+                >
+                  <span class="download-count" aria-live="polite">--</span>
+                  <span>downloads</span>
+                </span>
               </p>
             </article>
           </div>
@@ -238,5 +246,24 @@
     </div>
   </main>
 
+  <script>
+    document.querySelectorAll("[data-download-badge]").forEach(async (badge) => {
+      const count = badge.querySelector(".download-count");
+
+      try {
+        const response = await fetch(badge.dataset.downloadBadge, { cache: "no-store" });
+
+        if (!response.ok) {
+          throw new Error("Download badge request failed");
+        }
+
+        const data = await response.json();
+        count.textContent = data.message || "--";
+      } catch (error) {
+        count.textContent = "--";
+        badge.setAttribute("title", "Download count unavailable");
+      }
+    });
+  </script>
 </body>
 </html>

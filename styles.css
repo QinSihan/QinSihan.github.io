@@ -383,7 +383,8 @@ ul {
 }
 
 .timeline-card::before,
-.publication-card::before {
+.publication-card::before,
+.project-card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -443,10 +444,6 @@ ul {
   line-height: 1.62;
 }
 
-.project-link a {
-  font-size: 0.9rem;
-}
-
 .publication-card strong {
   color: var(--ink);
 }
@@ -486,20 +483,46 @@ ul {
   min-height: 100%;
 }
 
-.project-card p {
+.project-card > p {
   margin-top: 8px;
 }
 
-.project-link a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.project-meta {
   color: var(--accent);
+  font-size: 0.88rem;
   font-weight: 700;
+  line-height: 1.4;
 }
 
-.project-link a::after {
+.project-meta a {
+  color: inherit;
+}
+
+.project-meta a::after {
   content: "↗";
+  margin-left: 0.28rem;
+  font-size: 0.92em;
+}
+
+.project-meta > span {
+  color: inherit;
+}
+
+.project-meta > span + span {
+  margin-left: 0.42rem;
+}
+
+.project-downloads {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  color: var(--accent-strong);
+}
+
+.download-count {
+  display: inline-block;
+  min-width: 2.4ch;
+  font-variant-numeric: tabular-nums;
 }
 
 .placeholder-card {
