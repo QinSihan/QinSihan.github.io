@@ -221,6 +221,18 @@ ul {
   line-height: 1.15;
 }
 
+.page-views-link {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 22px;
+  align-items: center;
+}
+
+.page-views-link img {
+  width: auto;
+  height: 22px;
+}
+
 .visitor-map-card {
   margin-top: 14px;
   padding: 14px;
@@ -236,13 +248,17 @@ ul {
   background: rgba(255, 252, 247, 0.74);
 }
 
-.visitor-map-embed img,
-.visitor-map-embed iframe,
-.visitor-map-embed canvas,
-.visitor-map-embed svg {
+.visitor-map-embed img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.visitor-map-fallback {
+  padding: 14px 10px;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 .interest-card {
@@ -514,15 +530,17 @@ ul {
 
 .project-downloads {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.25rem;
-  color: var(--accent-strong);
+  align-items: center;
+  vertical-align: middle;
 }
 
-.download-count {
-  display: inline-block;
-  min-width: 2.4ch;
-  font-variant-numeric: tabular-nums;
+.project-meta .project-downloads::after {
+  content: none;
+}
+
+.project-downloads img {
+  width: auto;
+  height: 20px;
 }
 
 .placeholder-card {
