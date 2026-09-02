@@ -387,17 +387,10 @@ ul {
   gap: 10px;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
 .timeline-card,
 .publication-card,
 .project-card,
-.award-card,
-.skill-card {
+.award-card {
   position: relative;
   padding: 16px 18px;
   border-radius: var(--radius-lg);
@@ -407,8 +400,7 @@ ul {
 
 .timeline-card::before,
 .publication-card::before,
-.project-card::before,
-.skill-card::before {
+.project-card::before {
   content: "";
   position: absolute;
   left: 0;
@@ -430,8 +422,7 @@ ul {
 .timeline-top h3,
 .publication-card h3,
 .project-card h3,
-.award-card h3,
-.skill-card h3 {
+.award-card h3 {
   font-size: 1.12rem;
   line-height: 1.32;
 }
@@ -447,17 +438,6 @@ ul {
 
 .timeline-subtitle span {
   color: var(--accent);
-}
-
-.timeline-subtitle a {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.timeline-subtitle a::after {
-  content: "↗";
-  margin-left: 0.2rem;
-  font-size: 0.86em;
 }
 
 .timeline-time,
@@ -521,13 +501,6 @@ ul {
 
 .project-card > p {
   margin-top: 8px;
-}
-
-.skill-card p {
-  margin-top: 6px;
-  color: var(--ink-soft);
-  font-size: 0.94rem;
-  line-height: 1.55;
 }
 
 .project-meta {
@@ -621,8 +594,7 @@ ul {
 
   .contact-block,
   .meta-row,
-  .awards-list,
-  .skills-grid {
+  .awards-list {
     grid-template-columns: 1fr;
   }
 
