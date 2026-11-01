@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sihan Qin 关于世界模型、机器人操作与空间推理的论文。">
+  <title>论文 | Sihan Qin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261101-project-tags">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="site-name" href="index-zh.html">首页</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="cv-zh.html">简历</a>
+        <a href="experience-zh.html">经历</a>
+        <a href="projects-zh.html">项目</a>
+        <a href="publications-zh.html" aria-current="page">论文</a>
+        <span class="language-switch" role="group" aria-label="语言">
+          <a href="publications.html" class="latin-text" lang="en" hreflang="en" aria-label="切换到英文">en</a><span aria-hidden="true">/</span><span class="current-language" lang="zh-CN" aria-label="当前语言：中文">中文</span>
+        </span>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 class="page-title">论文</h1>
+      <p class="page-intro">我参与的研究主要关注两个问题：如何利用视频模型学习机器人操作，以及如何评估模型对三维空间的理解与推理能力。</p>
+      <nav class="page-index" aria-label="本页论文"><a href="#physgen">PhysGen</a><a href="#par">PAR</a><a href="#siri-bench">SIRI-Bench</a></nav>
+
+      <article class="work-detail" id="physgen" aria-labelledby="physgen-title">
+        <h2 id="physgen-title">Learning Physics from Pretrained Video Models: A Multimodal Continuous and Sequential World Interaction Models for Robotic Manipulation</h2>
+        <p class="authors">Zijian Song, Qichang Li, <strong>Sihan Qin</strong>, Yuhao Chen, Tianshui Chen, Liang Lin, Guangrun Wang</p>
+        <p class="meta">ICMR 2026</p>
+        <div class="links"><a href="https://arxiv.org/abs/2603.00110">arXiv</a><a href="https://arxiv.org/pdf/2603.00110">PDF</a></div>
+        <p>PhysGen 研究如何把视频预训练中学到的动态规律用于机器人操作：在同一个模型里预测未来画面和动作，执行后再根据新的观测继续预测。</p>
+        <figure class="detail-figure">
+          <a href="assets/publications/physgen.png" aria-label="查看 PhysGen 实验原图"><img src="assets/publications/physgen.png" alt="四组真实机器人任务：抓取透明物体、抓取方块、按按钮和堆叠方块" loading="lazy"></a>
+          <figcaption>四项真机任务：抓取透明物体、抓取方块、按按钮和堆叠方块。图片来自<a href="https://arxiv.org/html/2603.00110v2">论文图 5</a>。</figcaption>
+        </figure>
+        <h3>如何连接视频与动作</h3>
+        <p>模型把视觉观测和动作块表示为连续的“物理 token”，以自回归方式逐步预测。预测出的 token 分别解码为未来画面和可执行动作，环境返回的新观测再进入下一轮预测。模型通过因果注意力掩码组织视觉与动作之间的信息依赖，并结合前瞻式多 token 预测（L-MTP）和 KV 缓存提高预测与推理效率。</p>
+        <h3>实验设置</h3>
+        <p>论文在 LIBERO、ManiSkill 和图示的四项真机任务上评测。模型先在视频数据上预训练，再使用目标操作任务的示范数据微调，考察视频预训练能否帮助模型学习机器人操作。</p>
+      </article>
+
+      <article class="work-detail" id="par" aria-labelledby="par-title">
+        <h2 id="par-title">Physical Autoregressive Model for Robotic Manipulation without Action Pretraining</h2>
+        <p class="authors">Zijian Song, <strong>Sihan Qin</strong>, Tianshui Chen, Liang Lin, Guangrun Wang</p>
+        <p class="meta">arXiv · 2025</p>
+        <div class="links"><a href="https://arxiv.org/abs/2508.09822">arXiv</a><a href="https://arxiv.org/pdf/2508.09822">PDF</a><a href="https://hcplab-sysu.github.io/PhysicalAutoregressiveModel/">项目主页与演示</a></div>
+        <p>PAR 尝试将视频预训练中学到的动态规律迁移到机器人控制，联合生成未来画面与动作。这里的“无需动作预训练”指不使用大规模机器人动作数据进行预训练；目标任务仍需要示范数据微调。</p>
+        <figure class="detail-figure">
+          <a href="assets/publications/par.png" aria-label="查看物理自回归模型原图"><img src="assets/publications/par.png" alt="物理 token 联合表示画面与动作，用于联合预测，并在动作执行后接收新观测作为反馈" loading="lazy"></a>
+          <figcaption>模型联合预测画面与动作，并在动作执行后接收新的环境观测。图片来自<a href="https://arxiv.org/html/2508.09822v4">论文图 1</a>。</figcaption>
+        </figure>
+        <h3>方法思路</h3>
+        <p>模型将视觉与动作 token 放入同一序列，用因果自回归模型预测，再由基于扩散模型的解码器生成对应的画面和动作。执行后的新观测会成为后续预测的上下文，让预测过程持续接收环境反馈。</p>
+        <h3>实验设置</h3>
+        <p>论文在 ManiSkill 的推方块（PushCube）、抓方块（PickCube）和堆方块（StackCube）任务中进行评测，并通过消融实验比较自回归结构与不同解码方式。项目主页提供了预测画面与实际仿真执行的对照演示。</p>
+        <h3>我的工作</h3>
+        <p>我参与模型开发、训练评测和论文撰写。相关工作还包括真机实验与示范数据采集，具体内容见 <a href="experience-zh.html#hcp">HCP Lab 研究经历</a>。</p>
+      </article>
+
+      <article class="work-detail" id="siri-bench" aria-labelledby="siri-title">
+        <h2 id="siri-title">SIRI-Bench: Challenging VLMs' Spatial Intelligence through Complex Reasoning Tasks</h2>
+        <p class="authors">Zijian Song, Xiaoxin Lin, Qiuming Huang, <strong>Sihan Qin</strong>, Guangrun Wang, Liang Lin</p>
+        <p class="meta">arXiv · 2025</p>
+        <div class="links"><a href="https://arxiv.org/abs/2506.14512">arXiv</a><a href="https://arxiv.org/pdf/2506.14512">PDF</a></div>
+        <p>SIRI-Bench 把立体几何题放进三维场景，评估视觉语言模型（VLM）能否先从视频中找到解题所需的空间关系，再利用这些条件完成推理。</p>
+        <figure class="detail-figure">
+          <a href="assets/publications/siri-bench.png" aria-label="查看 SIRI-Bench 任务示意原图"><img src="assets/publications/siri-bench.png" alt="对比以文字和示意图呈现的几何问题与嵌入三维场景的同一问题，并展示空间推理步骤" loading="lazy"></a>
+          <figcaption>同一道几何题的两种呈现方式：直接给出文字条件，或让模型从三维场景中提取关键条件。图片来自<a href="https://arxiv.org/html/2506.14512v4">论文图 1</a>。</figcaption>
+        </figure>
+        <h3>怎样构造题目</h3>
+        <p>自动场景生成引擎将几何题转换为三维场景和视频。题目中的关键几何条件通过画面呈现，辅助条件和问题保留为文字，因此模型需要结合视觉信息解题。</p>
+        <h3>怎样评估空间理解与推理</h3>
+        <p>实验比较从视频中提取条件和直接读取完整文字条件两种设置，并分析空间感知与推理中的错误。这组对照有助于判断：模型是在理解场景时遗漏或误读了条件，还是在获得条件后仍然无法完成推理。</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

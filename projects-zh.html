@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sihan Qin 的研究工具与软件项目。">
+  <title>项目 | Sihan Qin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261101-project-tags">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="site-name" href="index-zh.html">首页</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="cv-zh.html">简历</a>
+        <a href="experience-zh.html">经历</a>
+        <a href="projects-zh.html" aria-current="page">项目</a>
+        <a href="publications-zh.html">论文</a>
+        <span class="language-switch" role="group" aria-label="语言">
+          <a href="projects.html" class="latin-text" lang="en" hreflang="en" aria-label="切换到英文">en</a><span aria-hidden="true">/</span><span class="current-language" lang="zh-CN" aria-label="当前语言：中文">中文</span>
+        </span>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 class="page-title">项目</h1>
+      <p class="page-intro">这里收录了我开发的论文阅读工具，以及参与的计算机图形学课程项目。</p>
+      <nav class="page-index" aria-label="本页项目"><a href="#zotero-paper-partner">Zotero Paper Partner</a><a href="#cyberpunk-recon">Cyberpunk Recon</a></nav>
+
+      <article class="work-detail" id="zotero-paper-partner" aria-labelledby="zotero-title">
+        <h2 id="zotero-title">Zotero Paper Partner</h2>
+        <p class="meta">个人项目 · JavaScript · Zotero 插件</p>
+        <div class="links"><a href="https://github.com/QinSihan/zotero-paper-partner">GitHub</a><a href="https://github.com/QinSihan/zotero-paper-partner/releases">下载</a><a class="project-badge" href="https://github.com/QinSihan/zotero-paper-partner/releases" aria-label="Zotero Paper Partner 版本下载"><img src="https://img.shields.io/github/downloads/QinSihan/zotero-paper-partner/total?label=downloads&amp;logo=GitHub&amp;style=flat-square&amp;labelColor=626873&amp;color=245b87" alt="Zotero Paper Partner 下载量" loading="lazy"></a></div>
+        <p>读论文时，有时只是一个概念没弄明白，却要切换到聊天窗口、复制上下文，再等一个回答。Zotero Paper Partner 把提问这一步留在笔记里：写下问题后继续阅读，回答会直接补到问题下方。</p>
+        <figure class="detail-figure">
+          <a href="assets/projects/zotero-paper-partner-demo.gif" aria-label="查看 Zotero Paper Partner 完整演示"><img src="assets/projects/zotero-paper-partner-demo.gif" alt="在 Zotero 笔记中写下 Q: 问题，插件在后台生成回答并补到问题下方" loading="lazy"></a>
+          <figcaption>问题和回答都留在原来的 Zotero 笔记中。</figcaption>
+        </figure>
+        <h3>怎么使用</h3>
+        <ul>
+          <li>在正在编辑的 Zotero 笔记中，以 <code>Q:</code> 开头写下问题，按回车后继续阅读。</li>
+          <li>插件结合笔记中的上下文，在后台生成回答，再将回答写到问题下方。</li>
+          <li>引用、问题和回答保留在同一份普通笔记里，可以继续编辑和整理。</li>
+        </ul>
+        <h3>为什么这样设计</h3>
+        <p>我希望提问能融入原有的阅读习惯。遇到不懂的地方时，可以先记下问题，不必马上中断阅读；回头再看，相关引用和回答已经放在一起。</p>
+        <p>如果在等待回答时修改了上下文，插件会把旧结果标记为过期；请求失败时，也会显示错误状态。这样可以避免把基于旧内容生成的回答误当成当前答案。</p>
+        <h3>安装与配置</h3>
+        <p>从 <a href="https://github.com/QinSihan/zotero-paper-partner/releases/latest">Releases</a> 下载 <code>paper-partner.xpi</code>，在 Zotero 的“工具 → 插件”中选择“从文件安装插件”。随后在 Paper Partner 设置中填入 API key、接口地址和模型名称，支持 OpenAI 兼容接口。</p>
+        <h3>开发与复现</h3>
+        <p>这个项目约 99% 通过 Vibe Coding 完成。除了源码，我还公开了原始 prompt 和设计说明（Open Prompt），保存在 <a href="https://github.com/QinSihan/zotero-paper-partner/blob/main/target.md">target.md</a> 中。其他人可以将这份文件交给 coding agent 复现，也可以在此基础上继续扩展。仓库同时提供打包说明。</p>
+      </article>
+
+      <article class="work-detail" id="cyberpunk-recon" aria-labelledby="cyberpunk-title">
+        <h2 id="cyberpunk-title">Cyberpunk Recon</h2>
+        <p class="meta">C++ · OpenGL · 团队课程项目</p>
+        <div class="links"><a href="https://github.com/QinSihan/CGTeamProject">GitHub</a></div>
+        <p>这是一个用 C++ 和 OpenGL 开发的第一人称探索游戏原型。玩家需要在 90 秒内，在赛博朋克城市中寻找并扫描红色异常信号。扫描远处目标前，需要先用鼠标滚轮拉近画面。</p>
+        <h3>项目内容</h3>
+        <p>项目整合了场景加载、渲染、相机控制、输入处理、目标扫描和游戏界面。城市模型通过 Assimp 加载，画面包含随距离变化的雾效和故障风格的后处理效果（glitch）；任务说明、倒计时、计分和重新开始等界面使用 Dear ImGui 实现。</p>
+        <h3>我的工作</h3>
+        <ul>
+          <li>搭建项目框架与依赖环境，实现相机移动、视角控制和输入处理。</li>
+          <li>与队友共同完成模型加载、场景渲染，以及部分界面和游戏逻辑。</li>
+          <li>整合团队开发的模块，使渲染、交互和任务流程能够一起运行。</li>
+        </ul>
+        <p>这是一个以图形学和交互为重点的课程项目，碰撞与命中判定采用了简化实现。具体分工和开发过程记录在仓库的 <a href="https://github.com/QinSihan/CGTeamProject/blob/master/Log.md">开发日志</a> 中。</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sihan Qin 在机器人学习、世界模型与假肢控制方面的研究和实习经历。">
+  <title>经历 | Sihan Qin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261101-project-tags">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="site-name" href="index-zh.html">首页</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="cv-zh.html">简历</a>
+        <a href="experience-zh.html" aria-current="page">经历</a>
+        <a href="projects-zh.html">项目</a>
+        <a href="publications-zh.html">论文</a>
+        <span class="language-switch" role="group" aria-label="语言">
+          <a href="experience.html" class="latin-text" lang="en" hreflang="en" aria-label="切换到英文">en</a><span aria-hidden="true">/</span><span class="current-language" lang="zh-CN" aria-label="当前语言：中文">中文</span>
+        </span>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 class="page-title">研究与实习</h1>
+      <p class="page-intro">这里记录了我在实验室和企业中参与的研究，以及各阶段承担的具体工作。</p>
+      <nav class="page-index" aria-label="本页经历"><a href="#brainco">BrainCo</a><a href="#isee">ISEE Lab</a><a href="#hcp">HCP Lab</a></nav>
+
+      <article class="work-detail" id="brainco" aria-labelledby="brainco-title">
+        <div class="entry-heading"><h2 id="brainco-title">BrainCo</h2><time>2026.09 — 至今</time></div>
+        <p class="meta">具身智能算法实习生 · 深圳</p>
+        <h3>半自动假肢</h3>
+        <p>目前，我主要负责半自动假肢相关工作，探索如何将使用者的意图与机器人学习得到的控制策略结合起来。</p>
+      </article>
+
+      <article class="work-detail" id="isee" aria-labelledby="isee-title">
+        <div class="entry-heading"><h2 id="isee-title">中山大学 ISEE Lab</h2><time>2026.04 — 2026.09</time></div>
+        <p class="meta">研究实习生 · 指导教师：郑伟诗 · 深圳</p>
+        <h3>面向多任务操作的 VLA 强化学习后训练</h3>
+        <p>视觉–语言–动作（VLA）模型根据图像和语言指令生成机器人动作。这段实习中，我探索如何用强化学习对这类模型进行后训练，工作涉及仿真中的训练评测，以及真机实验流程的搭建。</p>
+        <h3>仿真训练与评测</h3>
+        <p>我在 RoboTwin 2.0 和 LIBERO 中训练、评测引入 RL Token 的 StarVLA 与 π<sub>0.5</sub> 模型，重点是多任务机器人操作。</p>
+        <h3>真机实验</h3>
+        <p>真机方面，我围绕 π<sub>0.5</sub> 与 AgileX NERO/Piper 机械臂，参与搭建从数据采集到模型运行的实验流程，包括模型部署、遥操作示范采集、训练和在线推理。</p>
+      </article>
+
+      <article class="work-detail" id="hcp" aria-labelledby="hcp-title">
+        <div class="entry-heading"><h2 id="hcp-title">中山大学 HCP Lab</h2><time>2025.07 — 2026.03</time></div>
+        <p class="meta">研究实习生 · 指导教师：王广润、林倞 · 广州</p>
+        <h3>世界模型与机器人操作</h3>
+        <p>这段研究关注如何把视频预训练中学到的动态规律用于机器人操作。我参与物理自回归模型（PAR）的研究，让模型联合预测未来画面与机器人动作，并在动作执行后利用新的观测继续预测。</p>
+        <h3>我的工作</h3>
+        <ul>
+          <li>参与模型的提出与开发，探索视频观测和机器人动作的联合建模。</li>
+          <li>在 ManiSkill、LIBERO 和 CALVIN 中开展训练与评测，调试批次大小、学习率及学习率调度策略。</li>
+          <li>在 Franka Panda 机械臂上开展真机实验，采集 80 条遥操作示范轨迹，用于模型的监督学习。</li>
+          <li>参与相关论文撰写。</li>
+        </ul>
+        <div class="links"><a href="publications-zh.html#par">PAR 论文介绍</a><a href="https://hcplab-sysu.github.io/PhysicalAutoregressiveModel/">项目主页与演示</a></div>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

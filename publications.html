@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Publications by Sihan Qin on world models, robotic manipulation, and spatial reasoning.">
+  <title>Publications | Sihan Qin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261101-project-tags">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="site-name" href="index.html">Home</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="cv.html">CV</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html" aria-current="page">Publications</a>
+        <span class="language-switch" role="group" aria-label="Language">
+          <span class="current-language" lang="en" aria-label="Current language: English">en</span><span aria-hidden="true">/</span><a href="publications-zh.html" lang="zh-CN" hreflang="zh-CN" aria-label="Switch to Chinese">中文</a>
+        </span>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 class="page-title">Publications</h1>
+      <p class="page-intro">My research explores learning robot manipulation from video models and evaluating how models understand and reason about 3D space.</p>
+      <nav class="page-index" aria-label="Publications on this page"><a href="#physgen">PhysGen</a><a href="#par">PAR</a><a href="#siri-bench">SIRI-Bench</a></nav>
+
+      <article class="work-detail" id="physgen" aria-labelledby="physgen-title">
+        <h2 id="physgen-title">Learning Physics from Pretrained Video Models: A Multimodal Continuous and Sequential World Interaction Models for Robotic Manipulation</h2>
+        <p class="authors">Zijian Song, Qichang Li, <strong>Sihan Qin</strong>, Yuhao Chen, Tianshui Chen, Liang Lin, Guangrun Wang</p>
+        <p class="meta">ICMR 2026</p>
+        <div class="links"><a href="https://arxiv.org/abs/2603.00110">arXiv</a><a href="https://arxiv.org/pdf/2603.00110">PDF</a></div>
+        <p>PhysGen explores how dynamics learned through video pretraining can support robot manipulation. A single model predicts future frames and actions, then uses new observations after execution to guide subsequent predictions.</p>
+        <figure class="detail-figure">
+          <a href="assets/publications/physgen.png" aria-label="Open the full-size PhysGen experiment figure"><img src="assets/publications/physgen.png" alt="Four rows of real-world robot tasks: picking a transparent object, picking a cube, pressing a button, and stacking cubes" loading="lazy"></a>
+          <figcaption>Four real-robot tasks: grasping a transparent object, picking up a cube, pressing a button, and stacking cubes. Image from <a href="https://arxiv.org/html/2603.00110v2">Figure 5 of the paper</a>.</figcaption>
+        </figure>
+        <h3>Connecting video and action</h3>
+        <p>Visual observations and action chunks are represented as continuous “physical tokens” and modeled autoregressively. Predicted tokens are decoded into future frames and executable actions; new observations feed into the next prediction. Causal masking, Lookahead Multi-Token Prediction (L-MTP), and KV caching address temporal dependencies and computational efficiency.</p>
+        <h3>Evaluation setup</h3>
+        <p>The paper evaluates the method on LIBERO, ManiSkill, and the four real-robot tasks shown above. Video pretraining is followed by fine-tuning on demonstrations for the target manipulation tasks, testing whether this pretraining can support downstream robot control.</p>
+      </article>
+
+      <article class="work-detail" id="par" aria-labelledby="par-title">
+        <h2 id="par-title">Physical Autoregressive Model for Robotic Manipulation without Action Pretraining</h2>
+        <p class="authors">Zijian Song, <strong>Sihan Qin</strong>, Tianshui Chen, Liang Lin, Guangrun Wang</p>
+        <p class="meta">arXiv · 2025</p>
+        <div class="links"><a href="https://arxiv.org/abs/2508.09822">arXiv</a><a href="https://arxiv.org/pdf/2508.09822">PDF</a><a href="https://hcplab-sysu.github.io/PhysicalAutoregressiveModel/">Project page &amp; demos</a></div>
+        <p>PAR transfers dynamics learned through video pretraining to robot control by jointly generating future frames and actions. “Without action pretraining” refers to the absence of large-scale robot action pretraining; demonstrations are still needed to fine-tune the model on target tasks.</p>
+        <figure class="detail-figure">
+          <a href="assets/publications/par.png" aria-label="Open the full-size physical autoregression figure"><img src="assets/publications/par.png" alt="Physical tokens combine frame and action representations for joint prediction, with new observations fed back after action execution" loading="lazy"></a>
+          <figcaption>Joint frame and action prediction, with new observations fed back after execution. Image from <a href="https://arxiv.org/html/2508.09822v4">Figure 1 of the paper</a>.</figcaption>
+        </figure>
+        <h3>Approach</h3>
+        <p>A causal autoregressive model predicts a shared sequence of frame and action tokens. Diffusion-based decoders generate the corresponding frames and actions. Observations collected after execution become context for later predictions, providing continuing feedback from the environment.</p>
+        <h3>Evaluation setup</h3>
+        <p>The paper evaluates PushCube, PickCube, and StackCube in ManiSkill, with ablations of the autoregressive structure and decoding method. The project page compares predicted frames with actual simulated execution.</p>
+        <h3>My contribution</h3>
+        <p>I contributed to model development, training and evaluation, and paper writing. The broader project also involved real-robot experiments and demonstration collection; see my <a href="experience.html#hcp">HCP Lab experience</a> for details.</p>
+      </article>
+
+      <article class="work-detail" id="siri-bench" aria-labelledby="siri-title">
+        <h2 id="siri-title">SIRI-Bench: Challenging VLMs' Spatial Intelligence through Complex Reasoning Tasks</h2>
+        <p class="authors">Zijian Song, Xiaoxin Lin, Qiuming Huang, <strong>Sihan Qin</strong>, Guangrun Wang, Liang Lin</p>
+        <p class="meta">arXiv · 2025</p>
+        <div class="links"><a href="https://arxiv.org/abs/2506.14512">arXiv</a><a href="https://arxiv.org/pdf/2506.14512">PDF</a></div>
+        <p>SIRI-Bench places geometry problems in rendered 3D scenes to evaluate vision-language models (VLMs). Solving a problem requires finding relevant spatial relations in video and then reasoning from those conditions.</p>
+        <figure class="detail-figure">
+          <a href="assets/publications/siri-bench.png" aria-label="Open the full-size SIRI-Bench task illustration"><img src="assets/publications/siri-bench.png" alt="A geometry problem presented as text and a diagram is compared with the same problem embedded in a three-dimensional scene, followed by the spatial reasoning steps" loading="lazy"></a>
+          <figcaption>The same geometry problem with conditions stated in text or embedded in a 3D scene. Image from <a href="https://arxiv.org/html/2506.14512v4">Figure 1 of the paper</a>.</figcaption>
+        </figure>
+        <h3>Constructing the problems</h3>
+        <p>An automatic scene creation engine converts geometry problems into 3D scenes and videos. Key geometric conditions are conveyed visually, while auxiliary conditions and the question remain in text, requiring the model to use the visual input.</p>
+        <h3>Evaluating perception and reasoning</h3>
+        <p>The experiments compare extracting conditions from video with reading complete conditions in text, and analyze errors in spatial perception and reasoning. This comparison helps distinguish missed or misread scene information from reasoning failures after the conditions are available.</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

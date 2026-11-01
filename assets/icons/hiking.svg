@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>Hiking</title>
+  <g stroke="#383b3b" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 10.5a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="#fafaf7"/>
+    <path d="M25.5 19q-9-3-11.5 8l-2.5 10q-1.5 5 5 6l5 1 8-21Z" fill="#c8774d"/>
+    <path d="m17.5 26 6 1.5" stroke-width="1.8"/>
+    <path d="m28 20-6 20 7 8 5 10h6l-6-14-4-6 3-10 5 8 13-1V30H41l-6-10Z" fill="#fafaf7"/>
+    <path d="m24 42-6 11-5.5 4.5 4 3 8-6 5-8" fill="#fafaf7"/>
+    <path d="m50 26 3 34M34 58h6m-27.5-.5 4 3"/>
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Software projects by Sihan Qin: tools for reading and research, and interactive graphics.">
+  <title>Projects | Sihan Qin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261101-project-tags">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="site-header">
+      <a class="site-name" href="index.html">Home</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="cv.html">CV</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="publications.html">Publications</a>
+        <span class="language-switch" role="group" aria-label="Language">
+          <span class="current-language" lang="en" aria-label="Current language: English">en</span><span aria-hidden="true">/</span><a href="projects-zh.html" lang="zh-CN" hreflang="zh-CN" aria-label="Switch to Chinese">中文</a>
+        </span>
+      </nav>
+    </header>
+    <main id="main">
+      <h1 class="page-title">Projects</h1>
+      <p class="page-intro">Software inspired by everyday reading, alongside experiments in graphics and interaction.</p>
+      <nav class="page-index" aria-label="Projects on this page"><a href="#zotero-paper-partner">Zotero Paper Partner</a><a href="#cyberpunk-recon">Cyberpunk Recon</a></nav>
+
+      <article class="work-detail" id="zotero-paper-partner" aria-labelledby="zotero-title">
+        <h2 id="zotero-title">Zotero Paper Partner</h2>
+        <p class="meta">Independent project · JavaScript · Zotero plugin</p>
+        <div class="links"><a href="https://github.com/QinSihan/zotero-paper-partner">GitHub</a><a href="https://github.com/QinSihan/zotero-paper-partner/releases">Releases</a><a class="project-badge" href="https://github.com/QinSihan/zotero-paper-partner/releases" aria-label="Zotero Paper Partner release downloads"><img src="https://img.shields.io/github/downloads/QinSihan/zotero-paper-partner/total?label=downloads&amp;logo=GitHub&amp;style=flat-square&amp;labelColor=626873&amp;color=245b87" alt="Zotero Paper Partner download count" loading="lazy"></a></div>
+        <p>A small question during paper reading can turn into a detour: switch to a chat window, copy the context, then wait for an answer. Zotero Paper Partner keeps that question in the note. Write it down and keep reading; the answer appears directly below it.</p>
+        <figure class="detail-figure">
+          <a href="assets/projects/zotero-paper-partner-demo.gif" aria-label="Open the full Zotero Paper Partner demo"><img src="assets/projects/zotero-paper-partner-demo.gif" alt="A Q: question is written in a Zotero note, then answered below it by the plugin" loading="lazy"></a>
+          <figcaption>Questions and answers stay in the original Zotero note.</figcaption>
+        </figure>
+        <h3>How to use it</h3>
+        <ul>
+          <li>Start a question with <code>Q:</code> in the Zotero note you are editing, press Enter, and continue reading.</li>
+          <li>The plugin uses the note's context to generate an answer in the background and inserts it below the question.</li>
+          <li>Quotations, questions, and answers remain together in a regular note that you can keep editing.</li>
+        </ul>
+        <h3>Design choices</h3>
+        <p>I wanted asking a question to fit the reading habits I already had. I can leave a question without immediately stopping, then return to find the relevant quotation and answer together.</p>
+        <p>If the context changes while a request is running, the plugin marks the old result as stale. Failed requests also have a visible error state, helping distinguish a current answer from an outdated or unsuccessful response.</p>
+        <h3>Installation and setup</h3>
+        <p>Download <code>paper-partner.xpi</code> from <a href="https://github.com/QinSihan/zotero-paper-partner/releases/latest">Releases</a> and install it through Zotero's “Tools → Plugins → Install Add-on From File.” In the Paper Partner settings, enter an API key, endpoint, and model name. OpenAI-compatible endpoints are supported.</p>
+        <h3>Development and reproduction</h3>
+        <p>This project was built with extensive AI assistance—roughly 99% Vibe Coding. The original prompt and design specification are public as an <a href="https://github.com/QinSihan/zotero-paper-partner/blob/main/target.md">Open Prompt in target.md</a>, so others can give the same requirements to a coding agent to reproduce or extend the project. The repository also includes the full source and packaging instructions.</p>
+      </article>
+
+      <article class="work-detail" id="cyberpunk-recon" aria-labelledby="cyberpunk-title">
+        <h2 id="cyberpunk-title">Cyberpunk Recon</h2>
+        <p class="meta">C++ · OpenGL · Team coursework project</p>
+        <div class="links"><a href="https://github.com/QinSihan/CGTeamProject">GitHub</a></div>
+        <p>A first-person exploration prototype built with C++ and OpenGL. Players have 90 seconds to move through a cyberpunk city, locate red anomaly signals, and scan them. Distant targets require zooming in before they can be scanned.</p>
+        <h3>What the project includes</h3>
+        <p>The application connects scene loading and rendering with camera controls, input, scan detection, and a game interface. Assimp loads the city model, with distance-based fog and glitch post-processing shaping its appearance. Dear ImGui provides the mission briefing, timer, score display, and restart flow.</p>
+        <h3>My contribution</h3>
+        <ul>
+          <li>Built the project framework and dependency setup, and implemented camera movement, view controls, and input handling.</li>
+          <li>Shared work on model loading, scene rendering, and parts of the UI and gameplay with teammates.</li>
+          <li>Integrated the team's modules so rendering, interaction, and the mission flow worked together.</li>
+        </ul>
+        <p>This is a coursework prototype focused on graphics and interaction, with simplified collision and hit detection. The repository's <a href="https://github.com/QinSihan/CGTeamProject/blob/master/Log.md">development log</a> records the task breakdown and collaboration.</p>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
