@@ -23,7 +23,10 @@ The homepage currently features Zotero Paper Partner followed by BrainCo semi-au
 
 - `assets/projects/zotero-paper-partner-demo.gif`: the original animated [README demo](https://github.com/QinSihan/zotero-paper-partner/blob/main/assets/demo.gif), copied without modification from the Zotero Paper Partner repository.
 - `assets/projects/revo3-human-handshake-v2.png`: a stylized illustration generated with the built-in Imagegen tool, showing a BrainCo Revo 3 hand shaking a human hand. The exterior follows the [official product reference](https://brainco.tech/docs/revolimb-hand/images/revo3_rendering.png), and the pose follows a [handshake photograph](https://www.mediakatalogas.lt/nuotrauka/1225452/rankos-sveiki-pasveikinimas-ranka-sutartis-susitarti-vienybe-pazadas-rankos-judesys). This is a decorative illustration, not a photograph or a technical depiction of the project hardware.
-- `assets/icons/`: four SVG interest icons for football, orienteering, running, and hiking, using charcoal outlines and muted terracotta accents.
+- `assets/icons/`: static SVG interest icons using charcoal outlines, with terracotta accents on the orienteering flag and hiking backpack.
+- `assets/logos/brainco.svg`: the company symbol from the [BrainCo official website logo](https://www.brainco.tech/assets/brainco_logo-hvFOoEYh.png), displayed through an SVG viewport using the unmodified embedded source image.
+- `assets/logos/isee.png`: the lab emblem from the [ISEE official website](https://isee-ai.cn/assets/isee_logo.3d9fe7cf.png).
+- `assets/logos/hcp.png`: the lab emblem from the [HCP official GitHub account](https://github.com/HCPLab-SYSU), which is linked by the [HCP website](https://sysu-hcp.net/).
 
 Experience details are grounded in the English and Chinese CVs in `assets/cv/`. Project descriptions also use the projects' public READMEs, and paper summaries are checked against the linked papers. Keep personal contributions separate from a paper's overall method and results. BrainCo descriptions stay at the public overview level: semi-automated prosthetics combining human intent with learned control policies. Zotero Paper Partner retains its Open Prompt, Vibe Coding, and agent reproduction information.
 
