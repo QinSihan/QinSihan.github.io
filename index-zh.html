@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261103-official-logos">
+  <link rel="stylesheet" href="styles.css?v=20261119-tooltips">
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">跳转到正文</a>
@@ -60,7 +60,41 @@
           </section>
           <section class="section" aria-labelledby="interests-title">
             <div class="section-heading"><h2 id="interests-title">兴趣</h2></div>
-            <p class="personal-interests" aria-label="个人兴趣"><img src="assets/icons/football.svg?v=20261103-monochrome" alt="足球" title="足球" width="40" height="40"><img src="assets/icons/orienteering.svg" alt="定向越野" title="定向越野" width="40" height="40"><img src="assets/icons/running.svg?v=20261103-monochrome" alt="跑步" title="跑步" width="40" height="40"><img src="assets/icons/hiking.svg" alt="徒步" title="徒步" width="40" height="40"></p>
+            <div class="personal-interests" aria-label="个人兴趣">
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-football">
+                <img src="assets/icons/football.svg?v=20261103-monochrome" alt="足球" width="40" height="40">
+                <span class="icon-tooltip" id="tip-football" role="tooltip"><strong>足球</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-orienteering">
+                <img src="assets/icons/orienteering.svg" alt="定向越野" width="40" height="40">
+                <span class="icon-tooltip" id="tip-orienteering" role="tooltip"><strong>定向越野</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-running">
+                <img src="assets/icons/running.svg?v=20261103-monochrome" alt="跑步" width="40" height="40">
+                <span class="icon-tooltip" id="tip-running" role="tooltip"><strong>跑步</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-hiking">
+                <img src="assets/icons/hiking.svg" alt="徒步" width="40" height="40">
+                <span class="icon-tooltip" id="tip-hiking" role="tooltip"><strong>徒步</strong></span>
+              </span>
+            </div>
+          </section>
+          <section class="section" aria-labelledby="games-title">
+            <div class="section-heading"><h2 id="games-title">游戏</h2></div>
+            <div class="game-badges" aria-label="喜爱的游戏">
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-outer-wilds">
+                <img src="assets/icons/outer-wilds.png?v=20261119-v2" alt="星际拓荒——篝火与烤棉花糖" width="50" height="50">
+                <span class="icon-tooltip" id="tip-outer-wilds" role="tooltip"><strong>星际拓荒</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-stardew-valley">
+                <img src="assets/icons/stardew-valley.png?v=20261119-v2" alt="星露谷物语——祝尼魔" width="50" height="50">
+                <span class="icon-tooltip" id="tip-stardew-valley" role="tooltip"><strong>星露谷物语</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-cyberpunk-bar">
+                <img src="assets/icons/red-strings-va11halla.png?v=20261119-v2" alt="红弦俱乐部与赛博朋克酒保行动——缠绕红弦的赛博朋克马天尼酒杯" width="50" height="50">
+                <span class="icon-tooltip" id="tip-cyberpunk-bar" role="tooltip"><strong>调制饮料，改变人生</strong></span>
+              </span>
+            </div>
           </section>
         </aside>
       </div>

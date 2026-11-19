@@ -114,7 +114,22 @@ figcaption { margin-top:10px; color:var(--muted); font-size:14px; line-height:1.
 .home-background .entry-list { gap:17px; }
 .home-background .compact-list { font-size:16px; line-height:1.65; }
 .personal-interests { display:flex; align-items:center; gap:12px; }
-.personal-interests img { width:40px; height:40px; flex:none; }
+.game-badges { display:flex; align-items:center; gap:18px; }
+.icon-badge { position:relative; display:inline-flex; align-items:center; justify-content:center; flex:none; cursor:default; outline:none; }
+.personal-interests .icon-badge,.personal-interests .icon-badge img { width:40px; height:40px; }
+.game-badges .icon-badge,.game-badges .icon-badge img { width:50px; height:50px; }
+.icon-badge img { object-fit:contain; transition:transform .18s ease,filter .18s ease; }
+.icon-badge:hover img,.icon-badge:focus-visible img { transform:translateY(-2px) scale(1.05); filter:drop-shadow(0 4px 8px rgba(35,38,43,.14)); }
+.icon-badge:focus-visible { outline:2px solid var(--link); outline-offset:4px; border-radius:8px; }
+.icon-tooltip { position:absolute; left:50%; top:calc(100% + 10px); z-index:10; display:flex; flex-direction:column; gap:2px; width:max-content; max-width:240px; padding:7px 11px; border-radius:8px; background:#23262b; color:#fff; font-size:13px; line-height:1.4; text-align:left; box-shadow:0 8px 20px rgba(35,38,43,.18); opacity:0; visibility:hidden; pointer-events:none; transform:translate(-50%,-4px); transition:opacity .12s ease,transform .12s ease,visibility .12s ease; }
+.icon-tooltip strong { color:#fff; font-weight:600; font-size:13px; }
+.icon-tooltip span { color:#cfd5de; font-size:12px; }
+.icon-tooltip::after { content:""; position:absolute; bottom:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-bottom-color:#23262b; }
+.icon-badge:hover .icon-tooltip,.icon-badge:focus-visible .icon-tooltip { opacity:1; visibility:visible; transform:translate(-50%,0); }
+.icon-badge:first-child .icon-tooltip { left:0; transform:translateY(-4px); }
+.personal-interests .icon-badge:first-child .icon-tooltip::after { left:20px; transform:translateX(-50%); }
+.game-badges .icon-badge:first-child .icon-tooltip::after { left:25px; transform:translateX(-50%); }
+.icon-badge:first-child:hover .icon-tooltip,.icon-badge:first-child:focus-visible .icon-tooltip { transform:translateY(0); }
 .home-publications { grid-area:publications; margin-top:48px; }
 .home-publications .publication { grid-template-columns:136px minmax(0,1fr); gap:22px; }
 .home-publications .publication-image img { height:101px; }
@@ -193,4 +208,7 @@ html:lang(zh-CN) .home-background .meta,html:lang(zh-CN) .home-background .entry
   .home-background { grid-template-columns:minmax(0,1fr); }
   .home-background .section + .section { padding-top:24px; border-top:1px solid var(--line); }
 }
-@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  .icon-badge img,.icon-tooltip { transition:none; }
+}

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261103-official-logos">
+  <link rel="stylesheet" href="styles.css?v=20261119-tooltips">
 </head>
 <body class="home-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -60,7 +60,41 @@
           </section>
           <section class="section" aria-labelledby="interests-title">
             <div class="section-heading"><h2 id="interests-title">Interests</h2></div>
-            <p class="personal-interests" aria-label="Personal interests"><img src="assets/icons/football.svg?v=20261103-monochrome" alt="Football" title="Football" width="40" height="40"><img src="assets/icons/orienteering.svg" alt="Orienteering" title="Orienteering" width="40" height="40"><img src="assets/icons/running.svg?v=20261103-monochrome" alt="Running" title="Running" width="40" height="40"><img src="assets/icons/hiking.svg" alt="Hiking" title="Hiking" width="40" height="40"></p>
+            <div class="personal-interests" aria-label="Personal interests">
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-football">
+                <img src="assets/icons/football.svg?v=20261103-monochrome" alt="Football" width="40" height="40">
+                <span class="icon-tooltip" id="tip-football" role="tooltip"><strong>Football</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-orienteering">
+                <img src="assets/icons/orienteering.svg" alt="Orienteering" width="40" height="40">
+                <span class="icon-tooltip" id="tip-orienteering" role="tooltip"><strong>Orienteering</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-running">
+                <img src="assets/icons/running.svg?v=20261103-monochrome" alt="Running" width="40" height="40">
+                <span class="icon-tooltip" id="tip-running" role="tooltip"><strong>Running</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-hiking">
+                <img src="assets/icons/hiking.svg" alt="Hiking" width="40" height="40">
+                <span class="icon-tooltip" id="tip-hiking" role="tooltip"><strong>Hiking</strong></span>
+              </span>
+            </div>
+          </section>
+          <section class="section" aria-labelledby="games-title">
+            <div class="section-heading"><h2 id="games-title">Games</h2></div>
+            <div class="game-badges" aria-label="Favorite games">
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-outer-wilds">
+                <img src="assets/icons/outer-wilds.png?v=20261119-v2" alt="Outer Wilds — campfire and roasting marshmallow" width="50" height="50">
+                <span class="icon-tooltip" id="tip-outer-wilds" role="tooltip"><strong>Outer Wilds</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-stardew-valley">
+                <img src="assets/icons/stardew-valley.png?v=20261119-v2" alt="Stardew Valley — Junimo" width="50" height="50">
+                <span class="icon-tooltip" id="tip-stardew-valley" role="tooltip"><strong>Stardew Valley</strong></span>
+              </span>
+              <span class="icon-badge" tabindex="0" aria-describedby="tip-cyberpunk-bar">
+                <img src="assets/icons/red-strings-va11halla.png?v=20261119-v2" alt="The Red Strings Club and VA-11 HALL-A — cyberpunk martini glass wrapped in red strings" width="50" height="50">
+                <span class="icon-tooltip" id="tip-cyberpunk-bar" role="tooltip"><strong>Time to mix drinks and change lives.</strong></span>
+              </span>
+            </div>
           </section>
         </aside>
       </div>
