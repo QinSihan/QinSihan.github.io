@@ -92,7 +92,6 @@ figcaption { margin-top:10px; color:var(--muted); font-size:14px; line-height:1.
 .work-summary { display:grid; grid-template-columns:180px minmax(0,1fr); gap:28px; align-items:start; border-top:1px solid var(--line); padding-top:20px; }
 .work-image { display:block; }
 .work-image img { width:100%; aspect-ratio:4 / 3; height:auto; object-fit:contain; }
-.work-image--prosthetics img { aspect-ratio:2 / 1; object-fit:cover; }
 .work-affiliation { color:var(--muted); font-size:16px; font-weight:400; white-space:nowrap; }
 .work-summary h3 { font-size:20px; line-height:1.4; }
 .work-description > p { margin-top:9px; max-width:62ch; font-size:18px; line-height:1.6; }
@@ -109,7 +108,7 @@ figcaption { margin-top:10px; color:var(--muted); font-size:14px; line-height:1.
 .home-background .section-heading { margin-bottom:13px; gap:10px; }
 .home-background .section-heading h2 { font-size:19px; }
 .home-background .entry-heading { flex-direction:column; gap:2px; }
-.home-background h3 { font-size:17px; font-weight:500; }
+.home-background h3 { font-size:17px; font-weight:500; text-wrap:balance; }
 .home-background .meta,.home-background .entry-heading time,.home-background .entry-heading > .meta { font-size:16px; line-height:1.6; }
 .home-background .entry-list { gap:17px; }
 .home-background .compact-list { font-size:16px; line-height:1.65; }
@@ -149,7 +148,7 @@ html:lang(zh-CN) .work-summary h3 { font-size:18px; }
 html:lang(zh-CN) .home-page .latin-text { font-size:calc(1em + 2px); line-height:1; }
 html:lang(zh-CN) .thought-quote p { max-width:30em; font-size:17px; line-height:1.85; text-wrap:balance; }
 html:lang(zh-CN) .home-bio p { font-size:16px; line-height:1.8; }
-html:lang(zh-CN) .work-description > p { max-width:33em; font-size:16px; line-height:1.8; }
+html:lang(zh-CN) .work-description > p { max-width:none; font-size:16px; line-height:1.8; text-wrap:balance; }
 html:lang(zh-CN) .work-detail > p,html:lang(zh-CN) .work-detail > ul,html:lang(zh-CN) .page-intro { max-width:43em; }
 html:lang(zh-CN) .home-background .meta,html:lang(zh-CN) .home-background .entry-heading time,html:lang(zh-CN) .home-background .compact-list { line-height:1.75; }
 @media(max-width:1100px) and (min-width:901px) {
@@ -159,7 +158,7 @@ html:lang(zh-CN) .home-background .meta,html:lang(zh-CN) .home-background .entry
   .home-page .page { width:min(720px,calc(100% - 48px)); }
   .home-layout { grid-template-columns:minmax(0,1fr); grid-template-areas:"profile" "thought" "work" "publications" "background"; gap:34px; padding-top:32px; }
   .home-sidebar,.home-content { display:contents; }
-  .home-work,.home-publications,.home-background { margin-top:0; }
+  .home-work,.section.home-publications,.home-background { margin-top:0; }
   .home-profile { display:grid; grid-template-columns:112px minmax(0,1fr); gap:28px; align-items:start; }
   .home-profile .portrait { margin:3px 0 0; }
   .home-profile h1 { margin-bottom:10px; }
@@ -197,6 +196,10 @@ html:lang(zh-CN) .home-background .meta,html:lang(zh-CN) .home-background .entry
   .home-publications .publication { grid-template-columns:100px minmax(0,1fr); gap:17px; }
   .home-publications .publication-image img { height:80px; }
 }
+@media(max-width:480px) {
+  .home-background { grid-template-columns:minmax(0,1fr); }
+  .home-background .section + .section { padding-top:24px; border-top:1px solid var(--line); }
+}
 @media(max-width:440px) {
   .publication { grid-template-columns:1fr; gap:13px; }
   .publication-image img { width:200px; height:auto; max-height:125px; }
@@ -205,8 +208,6 @@ html:lang(zh-CN) .home-background .meta,html:lang(zh-CN) .home-background .entry
   .section-heading > a { font-size:14px; }
   .home-publications .publication { grid-template-columns:minmax(0,1fr); }
   .home-publications .publication-image img { width:200px; height:auto; max-height:125px; }
-  .home-background { grid-template-columns:minmax(0,1fr); }
-  .home-background .section + .section { padding-top:24px; border-top:1px solid var(--line); }
 }
 @media(prefers-reduced-motion:reduce) {
   html { scroll-behavior:auto; }
