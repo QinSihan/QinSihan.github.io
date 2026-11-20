@@ -17,13 +17,13 @@ This site is built with HTML and CSS and hosted on GitHub Pages.
 
 Each page has a Chinese counterpart named `*-zh.html`. The language links switch to the corresponding page, and navigation stays within the selected language. Both versions are plain HTML and work without JavaScript. Keep facts in sync across languages, but adapt Chinese prose to natural usage rather than translating sentence by sentence. Paper titles, project names, and familiar technical terms can retain their original spelling. CV links use the official English and Chinese PDFs in `assets/cv/`, copied without edits from the owner's Profile folder.
 
-The homepage currently features Zotero Paper Partner followed by BrainCo semi-autonomous prosthetics. Each selected project uses the same `work-summary` row: a thumbnail on the left, with its title, description, resource links, and tags on the right. The four tags are `Attention`, `Reasoning Ability`, `Intention`, and `Manipulation Ability`; Zotero uses the first pair, and prosthetics uses the second. Tags use pastel pills in two aligned columns. Add future selections as additional rows.
+The homepage features Zotero Paper Partner followed by BrainCo semi-autonomous prosthetics. Each thumbnail sits beside the project title and description. The repository link or project status appears alongside the title.
 
 ## Project thumbnails
 
 - `assets/projects/zotero-paper-partner-demo.gif`: the original animated [README demo](https://github.com/QinSihan/zotero-paper-partner/blob/main/assets/demo.gif), copied without modification from the Zotero Paper Partner repository.
 - `assets/projects/prosthetic-reach.webp` is an AI-generated oil-painting illustration for the prosthetics project. A human hand reaches toward a prosthetic hand in a composition inspired by Michelangelo’s *The Creation of Adam*. The prosthesis design draws on the [BrainCo Revo 3 reference](https://brainco.tech/docs/revolimb-hand/images/revo3_rendering.png).
-- `assets/icons/`: static SVG interest icons using charcoal outlines, with terracotta accents on the orienteering flag and hiking backpack.
+- The four `assets/icons/*-oil.webp` miniatures depict a football, an orienteering control, a running shoe, and a hiking pack.
 - `assets/logos/brainco.svg`: the company symbol from the [BrainCo official website logo](https://www.brainco.tech/assets/brainco_logo-hvFOoEYh.png), displayed through an SVG viewport using the unmodified embedded source image.
 - `assets/logos/isee.png`: the lab emblem from the [ISEE official website](https://isee-ai.cn/assets/isee_logo.3d9fe7cf.png).
 - `assets/logos/hcp.png`: the lab emblem from the [HCP official GitHub account](https://github.com/HCPLab-SYSU), which is linked by the [HCP website](https://sysu-hcp.net/).
